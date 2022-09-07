@@ -5,11 +5,20 @@
 	"manifest_version": 3,
 	"action": {
 		"default_popup": "index.html",
-		"default_title": "Open the popup"
+		"default_title": "Open Copycat",
+		"default_icon": {
+			"16": "logo192.png",
+			"48": "logo192.png",
+			"128": "logo192.png"
+		}
 	},
 	"icons": {
 		"16": "logo192.png",
 		"48": "logo192.png",
 		"128": "logo192.png"
-	}
+	},
+	"permissions": [
+		"activeTab",
+		"storage"
+	]
 }
