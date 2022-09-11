@@ -3,18 +3,32 @@ import './App.css'
 
 function App() {
 
-	const [items, setItems] = useState<[string, string][]>([])
+	const [copies, setCopies] = useState<[string, string][]>([])
 
 	useEffect(() => {
-		chrome.storage.sync.get(null, items => {
-			setItems(Object.entries(items))
+		chrome.storage.sync.get(null, copies => {
+			setCopies(Object.entries(copies))
 		})
-	}, [])
+	})
+
+	function removeCopy(id: string) {
+		chrome.storage.sync.remove(id)
+	}
+
+	function clearCopies() {
+		chrome.storage.sync.clear()
+	}
 
 	return (
-		<div className="App">
-			{items.map(([key, value]) => {
-				return <div id={key}>{value}</div>
+		<div className='App'>
+			<button onClick={clearCopies}>Clear All</button>
+			{copies.map(([key, value]) => {
+				return (
+					<div id={key} className='copy'>
+						<p>{value}</p>
+						<button onClick={() => removeCopy(key)}>Remove</button>
+					</div>
+				)
 			})}
 		</div>
 	)
