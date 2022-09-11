@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import logo from './logo.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
 
+	const [items, setItems] = useState<[string, string][]>([])
+
+	useEffect(() => {
+		chrome.storage.sync.get(null, items => {
+			setItems(Object.entries(items))
+		})
+	}, [])
+
 	return (
 		<div className="App">
-			<p>Here is some text to copy</p>
-			<img src="lily.jpeg" height={233} />
-			<a href="https://github.com/alDuncanson">@alDuncanson</a>
-			<p>#9be9a8</p>
-			<code>const copycat = null;</code>
+			{items.map(([key, value]) => {
+				return <div id={key}>{value}</div>
+			})}
 		</div>
 	)
 }
