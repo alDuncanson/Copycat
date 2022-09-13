@@ -7,7 +7,7 @@ export function togglePopupWindow() {
 				url: '/index.html',
 				type: 'popup',
 				width: 400,
-				height: 600,
+				height: 600
 			})
 		}
 	})

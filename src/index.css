@@ -5,5 +5,25 @@
 body {
   width: 400px;
 	height: 600px;
-	margin: auto;
+}
+
+#App {
+	height: 600px;
+}
+
+#Header {
+	height: 55px;
+}
+
+#Search {
+	height: 545px;
+}
+
+#SearchBar {
+	height: 34px;
+}
+
+#SearchResults {
+	height: 511px;
+	@apply overflow-y-auto;
 }

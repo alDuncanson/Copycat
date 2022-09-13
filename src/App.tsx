@@ -1,10 +1,11 @@
+import { Toaster } from 'react-hot-toast'
 import { Header } from './components/Header'
 import { Search } from './components/Search'
 
 function App() {
 	return (
-		// TODO add extension wrapper styles
-		<div className=''>
+		<div id='App' className='flex flex-col'>
+			<Toaster />
 			<Header />
 			<Search />
 		</div>
