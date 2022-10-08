@@ -19,7 +19,9 @@
 	},
 	"permissions": [
 		"activeTab",
-		"storage"
+		"storage",
+		"clipboardWrite",
+		"clipboardRead"
 	],
 	"content_scripts": [
 		{
