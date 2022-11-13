@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
+import { Copy } from "./utils/clipboard"
 
 export const useSyncStorage = () => {
-	// leaving this as [sting, any] because I plan to expand this to include more than just strings
-	const [copies, setCopies] = useState<[string, any][]>([])
+	const [copies, setCopies] = useState<[string, Copy][]>([])
 
 	useEffect(() => {
 		chrome.storage.sync.get(null, copies => {
@@ -10,7 +10,7 @@ export const useSyncStorage = () => {
 		})
 
 		chrome.storage.onChanged.addListener(() => {
-			chrome.storage.sync.get(null, (copies: { [key: string]: any }) => {
+			chrome.storage.sync.get(null, (copies: { [key: string]: Copy }) => {
 				setCopies(Object.entries(copies))
 			})
 		})
@@ -20,15 +20,12 @@ export const useSyncStorage = () => {
 }
 
 export const useSearchFilter = () => {
-	// typed search/filter string
 	const [filterString, setFilterString] = useState('')
 
-	// update filter string as user types
 	function handleFilter(event: React.ChangeEvent<HTMLInputElement>) {
 		setFilterString(event.target.value)
 	}
 
-	// clear filter string
 	function clearFilter() {
 		setFilterString('')
 	}

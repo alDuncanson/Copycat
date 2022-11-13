@@ -1,8 +1,8 @@
 (() => {
 	const contextMenuProperties: chrome.contextMenus.CreateProperties = {
-		id: 'copy',
+		id: 'copy-image',
 		title: 'Copycat Image',
-		contexts: ['image']
+		contexts: 'image'
 	}
 
 	chrome.runtime.onInstalled.addListener(() => {
@@ -14,9 +14,13 @@
 	})
 
 	chrome.contextMenus.onClicked.addListener((info, tab) => {
-		console.log(info, tab)
 		if (info.mediaType === 'image') {
-			chrome.storage.sync.set({ [Date.now()]: info.srcUrl })
+			chrome.storage.sync.set({
+				[Date.now()]: {
+					type: 'text',
+					data: info.srcUrl
+				}
+			})
 		}
 	})
 })()
