@@ -5,12 +5,12 @@ export const useSyncStorage = () => {
 	const [copies, setCopies] = useState<[string, Copy][]>([])
 
 	useEffect(() => {
-		chrome.storage.sync.get(null, copies => {
+		chrome.storage.local.get(null, copies => {
 			setCopies(Object.entries(copies))
 		})
 
 		chrome.storage.onChanged.addListener(() => {
-			chrome.storage.sync.get(null, (copies: { [key: string]: Copy }) => {
+			chrome.storage.local.get(null, (copies: { [key: string]: Copy }) => {
 				setCopies(Object.entries(copies))
 			})
 		})

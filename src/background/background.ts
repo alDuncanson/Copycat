@@ -15,7 +15,7 @@
 
 	chrome.contextMenus.onClicked.addListener((info: chrome.contextMenus.OnClickData) => {
 		if (info.mediaType === 'image') {
-			chrome.storage.sync.set({
+			chrome.storage.local.set({
 				[Date.now()]: {
 					type: 'image',
 					data: info.srcUrl
