@@ -1,6 +1,6 @@
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/20/solid'
-import { useSyncStorage } from '../hooks'
-import { KebabMenu } from './KebabMenu'
+import { useSyncStorage } from '../../hooks'
+import { KebabMenu } from '../KebabMenu'
 
 interface SearchBarProps {
 	filterString: string,

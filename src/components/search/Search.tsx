@@ -1,4 +1,4 @@
-import { useSearchFilter } from '../hooks'
+import { useSearchFilter } from '../../hooks'
 import { SearchBar } from './SearchBar'
 import { SearchResults } from './SearchResults'
 
