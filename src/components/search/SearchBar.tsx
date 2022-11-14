@@ -1,10 +1,11 @@
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/20/solid'
 import { useSyncStorage } from '../../hooks'
+import { FilterMenu } from '../FilterMenu'
 import { KebabMenu } from '../KebabMenu'
 
 interface SearchBarProps {
 	filterString: string,
-	handleFilter: (event: React.ChangeEvent<HTMLInputElement>) => void,
+	handleFilter: (filterString: string) => void,
 	clearFilter: () => void
 }
 
@@ -26,7 +27,7 @@ export function SearchBar({ filterString, handleFilter, clearFilter }: SearchBar
 						className='block w-full rounded-md border-gray-300 px-10 focus:border-indigo-500 focus:ring-indigo-500'
 						placeholder={`Search copies (${copiesFromStorage.length} total)`}
 						value={filterString}
-						onChange={handleFilter}
+						onChange={event => handleFilter(event.target.value)}
 					/>
 				</div>
 				<button
@@ -40,7 +41,8 @@ export function SearchBar({ filterString, handleFilter, clearFilter }: SearchBar
 					/>
 				</button>
 			</div>
-			<KebabMenu />
+			<KebabMenu handleFilter={handleFilter} />
+			<FilterMenu handleFilter={handleFilter} />
 		</div>
 	)
 }

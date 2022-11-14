@@ -5,13 +5,31 @@ import { SearchItem } from './SearchItem'
 export function SearchResults({ filterString }: { filterString: string }) {
 	const copiesFromStorage = useSyncStorage()
 
-	const filteredCopies = copiesFromStorage.filter(([key, copy]) => {
-		if (copy.type === 'text') {
-			return copy.data.toLowerCase().includes(filterString.toLowerCase())
+	const filteredCopies = copiesFromStorage.filter(([, copy]) => {
+		if (filterString.length > 0) {
+			if (filterString.includes('filter:')) {
+				switch (filterString.split(':')[1]) {
+					case 'image':
+						return copy.type === 'image'
+					case 'text':
+						return copy.type === 'text'
+					case 'all':
+						return true
+					case 'duplicate':
+						return copiesFromStorage.filter(
+							([, copyToCompare]) => copyToCompare.data === copy.data
+						).length > 1
+					case 'number':
+						return !isNaN(Number(copy.data))
+					default:
+						return false
+				}
+			} else if (copy.type === 'text') {
+				return copy.data.toLowerCase().includes(filterString.toLowerCase())
+			}
 		} else {
 			return true
 		}
-		// TODO filter by date as well as images?
 	})
 
 	return (

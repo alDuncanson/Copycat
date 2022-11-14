@@ -9,7 +9,7 @@ export function Search() {
 		<div id='Search'>
 			<SearchBar
 				filterString={filterString}
-				handleFilter={handleFilter}
+				handleFilter={filterString => handleFilter(filterString)}
 				clearFilter={clearFilter}
 			/>
 			<SearchResults filterString={filterString} />

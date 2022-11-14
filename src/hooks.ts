@@ -22,8 +22,8 @@ export const useSyncStorage = () => {
 export const useSearchFilter = () => {
 	const [filterString, setFilterString] = useState('')
 
-	function handleFilter(event: React.ChangeEvent<HTMLInputElement>) {
-		setFilterString(event.target.value)
+	function handleFilter(filterString: string) {
+		setFilterString(filterString)
 	}
 
 	function clearFilter() {

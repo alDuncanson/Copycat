@@ -6,6 +6,6 @@ export function copyToClipboard(text: string) {
 }
 
 export interface Copy {
-	type: 'text',
+	type: string,
 	data: string
 }

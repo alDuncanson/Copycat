@@ -1,19 +1,17 @@
 import { Menu, Transition } from '@headlessui/react'
-import { EllipsisVerticalIcon } from '@heroicons/react/20/solid'
+import { FunnelIcon } from '@heroicons/react/20/solid'
 import { Fragment } from 'react'
-import { deleteSyncStorageArea } from '../utils/chrome-storage'
-import { togglePopupWindow } from '../utils/chrome-window'
 
 function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ')
 }
 
-export function KebabMenu({ handleFilter }: { handleFilter: (filterString: string) => void }) {
+export function FilterMenu({ handleFilter }: { handleFilter: (filterString: string) => void }) {
 	return (
-		<Menu as='div' className='relative inline-block text-left mr-4'>
+		<Menu as='div' className='relative inline-block text-left'>
 			<div>
 				<Menu.Button className='inline-flex w-full justify-center rounded-md border border-gray-300 bg-white p-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
-					<EllipsisVerticalIcon className='h-5 w-5 text-gray-400' aria-hidden='true' />
+					<FunnelIcon className='h-5 w-5 text-gray-400' aria-hidden='true' />
 				</Menu.Button>
 			</div>
 			<Transition
@@ -34,9 +32,9 @@ export function KebabMenu({ handleFilter }: { handleFilter: (filterString: strin
 										active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
 										'block px-4 py-2 text-sm'
 									)}
-									onClick={togglePopupWindow}
+									onClick={() => handleFilter('filter:image')}
 								>
-									Popout Window
+									Images
 								</button>
 							)}
 						</Menu.Item>
@@ -47,9 +45,35 @@ export function KebabMenu({ handleFilter }: { handleFilter: (filterString: strin
 										active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
 										'block px-4 py-2 text-sm'
 									)}
-									onClick={deleteSyncStorageArea}
+									onClick={() => handleFilter('filter:text')}
 								>
-									Delete all copies
+									Text
+								</button>
+							)}
+						</Menu.Item>
+						<Menu.Item>
+							{({ active }) => (
+								<button
+									className={classNames(
+										active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+										'block px-4 py-2 text-sm'
+									)}
+									onClick={() => handleFilter('filter:number')}
+								>
+									Numbers
+								</button>
+							)}
+						</Menu.Item>
+						<Menu.Item>
+							{({ active }) => (
+								<button
+									className={classNames(
+										active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+										'block px-4 py-2 text-sm'
+									)}
+									onClick={() => handleFilter('filter:duplicate')}
+								>
+									Duplicates
 								</button>
 							)}
 						</Menu.Item>
