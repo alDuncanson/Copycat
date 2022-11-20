@@ -8,7 +8,10 @@ const toasts = {
 
 export function createToast(type: keyof typeof toasts) {
 	toast.dismiss(type)
-	toast.success(toasts[type], {
-		id: type
-	})
+
+	setTimeout(() => {
+		toast.success(toasts[type], {
+			id: type
+		})
+	}, 100)
 }

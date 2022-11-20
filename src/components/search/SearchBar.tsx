@@ -14,7 +14,7 @@ export function SearchBar({ filterString, handleFilter, clearFilter }: SearchBar
 
 	return (
 		<div id='SearchBar' className='flex flex-row items-center px-4'>
-			<div className='mr-4 flex flex-1 rounded-md shadow-sm border border-gray-300'>
+			<div className='flex flex-1 rounded-md shadow-sm border border-gray-300 mr-2'>
 				<div className='relative flex flex-grow items-stretch focus-within:z-10'>
 					<div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
 						<MagnifyingGlassIcon
@@ -41,8 +41,8 @@ export function SearchBar({ filterString, handleFilter, clearFilter }: SearchBar
 					/>
 				</button>
 			</div>
-			<KebabMenu handleFilter={handleFilter} />
 			<FilterMenu handleFilter={handleFilter} />
+			<KebabMenu />
 		</div>
 	)
 }
