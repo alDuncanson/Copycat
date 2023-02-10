@@ -26,6 +26,8 @@ export function SearchResults({ filterString }: { filterString: string }) {
 				}
 			} else if (copy.type === 'text') {
 				return copy.data.toLowerCase().includes(filterString.toLowerCase())
+			} else {
+				return false
 			}
 		} else {
 			return true
