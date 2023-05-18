@@ -11,7 +11,7 @@ function classNames(...classes: string[]) {
 export function KebabMenu() {
 	return (
 		<Menu as='div' className='relative inline-block text-left'>
-			<Menu.Button className='inline-flex w-full justify-center rounded-md border border-gray-300 bg-white p-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+			<Menu.Button className='inline-flex w-full justify-center rounded-md border border-gray-300 bg-white p-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-violet-800 focus:ring-offset-2 focus:ring-offset-gray-100'>
 				<EllipsisVerticalIcon className='h-5 w-5 text-gray-400' aria-hidden='true' />
 			</Menu.Button>
 			<Transition

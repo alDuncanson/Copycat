@@ -24,7 +24,7 @@ export function SearchBar({ filterString, handleFilter, clearFilter }: SearchBar
 					</div>
 					<input
 						type='text'
-						className='block w-full rounded-md border-gray-300 px-10 focus:border-indigo-500 focus:ring-indigo-500'
+						className='block w-full rounded-md border-gray-300 px-10 focus:border-violet-800 focus:ring-violet-800'
 						placeholder={`Search copies (${copiesFromStorage.length} total)`}
 						value={filterString}
 						onChange={event => handleFilter(event.target.value)}
@@ -32,7 +32,7 @@ export function SearchBar({ filterString, handleFilter, clearFilter }: SearchBar
 				</div>
 				<button
 					type='button'
-					className='relative -ml-px inline-flex items-center space-x-2 rounded-r-md border-l border-gray-300 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500'
+					className='relative -ml-px inline-flex items-center space-x-2 rounded-r-md border-l border-gray-300 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:border-violet-800 focus:outline-none focus:ring-1 focus:ring-violet-800'
 					onClick={clearFilter}
 				>
 					<XMarkIcon
