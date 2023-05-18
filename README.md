@@ -1,46 +1,119 @@
-# Getting Started with Create React App
+<div id="top"></div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
+<div align="center">
+  <a href="https://github.com/alDuncanson/Copycat">
+    <img src="public/icons/icon128.png" alt="Logo" height="144">
+  </a>
+  <p align="center">
+    Manage your clipboard history with Copycat!
+    <br />
+    <br />
+    <a href="https://github.com/alDuncanson/cuppa/issues">Report a Bug</a>
+    ·
+    <a href="https://github.com/alDuncanson/cuppa/issues">Request Feature</a>
+  </p>
+</div>
 
-## Available Scripts
+<!-- Badges -->
+<div align="center">
+	<a href="https://github.com/alDuncanson/Copycat/issues">
+    <img src="https://img.shields.io/github/issues/alDuncanson/Copycat">
+  </a>
+	<a href="https://github.com/alDuncanson/Copycat/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/alDuncanson/Copycat">
+  </a>
+	<a href="https://github.com/alDuncanson/Copycat">
+    <img src="https://img.shields.io/github/stars/alDuncanson/Copycat">
+  </a>
+	<a href="https://github.com/sponsors/alDuncanson">
+		<img src="https://img.shields.io/github/sponsors/alDuncanson">
+	</a>
+</div>
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+Copycat saves your clipboard history so you can paste it later!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about">About</a></li>
+		<li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+TODO
 
-### `npm run build`
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Search
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Copycat search](content/search.gif)
 
-### `npm run eject`
+### Filter
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Copycat filter](content/filter.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Copy again, or delete
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Copy again or delete a copy](content/copy_and_delete.gif)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Learn More
+## Roadmap
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [ ] Display copied hex codes as colors
+- [ ] Clickable links
+- [ ] Stylized code snippets
+- [ ] Stylized quotes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+See requested features and ideas in [Copycat Discussions](https://github.com/alDuncanson/Copycat/discussions/categories/ideas)!
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contributing
+
+If you have a suggestion that would make Copycat better, you can open an issue with the tag `enhancement`.
+
+Or feel free to fork the project and open a pull request with your suggested changes.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/RadFeature`)
+3. Commit your Changes (`git commit -m 'Add some RadFeature'`)
+4. Push to the Branch (`git push origin feature/RadFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## License
+
+Distributed under the MIT License. See [LICENSE](https://github.com/alDuncanson/Copycat/blob/main/LICENSE) for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contact
+
+alDuncanson@proton.me
+
+<a href='https://www.buymeacoffee.com/alduncanson' target='_blank'><img src='https://cdn.buymeacoffee.com/buttons/default-orange.png' alt='Buy Me A Coffee' height='34' width='144'></a>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Acknowledgments
+
+- [Project badges](https://shields.io)
+
+<p align="right">(<a href="#top">back to top</a>)</p>

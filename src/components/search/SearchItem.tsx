@@ -17,7 +17,7 @@ export function SearchItem({ key, date, copy }: { key: string, date: string, cop
 						<div className='truncate'>
 							<div className='flex text-sm'>
 								{copy.type === 'text' ?
-									<p className='truncate font-medium text-indigo-600'>{copy.data}</p>
+									<p className='truncate font-medium text-violet-800'>{copy.data}</p>
 									:
 									<img
 										onClick={viewImage}
@@ -38,7 +38,7 @@ export function SearchItem({ key, date, copy }: { key: string, date: string, cop
 					<div className='ml-3 flex-shrink-0'>
 						<button
 							type='button'
-							className='inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+							className='inline-flex items-center rounded-md border border-transparent bg-violet-800 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-violet-800 focus:outline-none focus:ring-2 focus:ring-violet-800 focus:ring-offset-2'
 							title='Copy to Clipboard'
 							onClick={() => copyToClipboard(copy.data)}
 						>
@@ -51,7 +51,7 @@ export function SearchItem({ key, date, copy }: { key: string, date: string, cop
 					<div className='ml-3 flex-shrink-0'>
 						<button
 							type='button'
-							className='inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+							className='inline-flex items-center rounded-md border border-transparent bg-violet-800 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-violet-800 focus:outline-none focus:ring-2 focus:ring-violet-800 focus:ring-offset-2'
 							title='Delete Copy'
 							onClick={() => removeCopyFromSyncStorageArea(date)}
 						>
