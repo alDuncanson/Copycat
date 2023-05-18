@@ -61,15 +61,15 @@ TODO
 
 ### Search
 
-![Copycat search](content/search.gif)
+<img src="content/search.gif" width="400" alt="Copycat search" />
 
 ### Filter
 
-![Copycat filter](content/filter.gif)
+<img src="content/filter.gif" width="400" alt="Copycat filter" />
 
 ### Copy again, or delete
 
-![Copy again or delete a copy](content/copy_and_delete.gif)
+<img src="content/copy_and_delete.gif" width="400" alt="Copy again or delete a copy" />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
