@@ -53,7 +53,7 @@ Copycat saves your clipboard history so you can paste it later!
 
 ## Installation
 
-TODO
+Pending review in the Chrome Web Store.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
