@@ -30,6 +30,11 @@
 		<img src="https://img.shields.io/github/sponsors/alDuncanson">
 	</a>
 </div>
+<div align="center">
+  <a href="https://chrome.google.com/webstore/detail/copycat/gdfhhdijmhnmgpjpifkdnmajomaaceng">
+    <img src="https://img.shields.io/chrome-web-store/v/gdfhhdijmhnmgpjpifkdnmajomaaceng">
+  </a>
+</div>
 
 ## About
 
