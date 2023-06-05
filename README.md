@@ -29,10 +29,19 @@
 	<a href="https://github.com/sponsors/alDuncanson">
 		<img src="https://img.shields.io/github/sponsors/alDuncanson">
 	</a>
+  <a href="https://github.com/alDuncanson/Copycat/releases">
+		<img src="https://img.shields.io/github/v/release/alduncanson/copycat?include_prereleases">
+	</a>
 </div>
 <div align="center">
   <a href="https://chrome.google.com/webstore/detail/copycat/gdfhhdijmhnmgpjpifkdnmajomaaceng">
     <img src="https://img.shields.io/chrome-web-store/v/gdfhhdijmhnmgpjpifkdnmajomaaceng">
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/copycat/gdfhhdijmhnmgpjpifkdnmajomaaceng">
+    <img src="https://img.shields.io/chrome-web-store/rating/gdfhhdijmhnmgpjpifkdnmajomaaceng">
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/copycat/gdfhhdijmhnmgpjpifkdnmajomaaceng">
+    <img src="https://img.shields.io/chrome-web-store/users/gdfhhdijmhnmgpjpifkdnmajomaaceng">
   </a>
 </div>
 
@@ -93,7 +102,7 @@ Right-click an image and select "Copycat image" to save it to your clipboard his
 - [ ] Stylized quotes
 - [ ] Sync clipboard history across devices
 
-See requested features and ideas in [Copycat Discussions](https://github.com/alDuncanson/Copycat/discussions/categories/ideas)!
+See requested features and ideas in [Copycat Discussions](https://github.com/alDuncanson/Copycat/discussions)!
 
 <p align="right"><a href="#top">back to top</a></p>
 
